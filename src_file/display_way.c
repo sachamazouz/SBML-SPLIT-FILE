@@ -14,11 +14,6 @@ void display_1(char **av, position_t *s)
     char **tab2 = alphabetical_order(tab, s);
     char **final_tab = get_display(tab2, s);
 
-    if (s->good_line == 1) {
-        infinite_putstr(tab);
-        //créer un special display
-        return;
-    }
     display_basic_list(final_tab);
     return;
 }

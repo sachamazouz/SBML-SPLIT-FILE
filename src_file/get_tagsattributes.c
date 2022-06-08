@@ -32,7 +32,7 @@ int d_good_line(char **tab)
             counter++;
         i++;
     }
-    return counter;
+    return counter + 1;
 }
 
 char **get_tagsattributes(char **tab, position_t *s)
