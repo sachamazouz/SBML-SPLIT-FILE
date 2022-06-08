@@ -35,6 +35,7 @@ SRC	=	$(SRC_FILE)/main.c 							\
 		$(PARTIE_1)/get_display2.c					\
 		$(PARTIE_1)/alpha_arg_tri.c					\
 		$(PARTIE_2)/detect_name.c					\
+		$(PARTIE_2)/filter_array.c					\
 
 all:		$(NAME)
 

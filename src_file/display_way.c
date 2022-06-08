@@ -24,15 +24,31 @@ void display_compartment(char **av, position_t *s)
     char *string2 = my_strdup(av[3]);
     char **all_arg = my_strtowordtab_synthesis(string);
     char **tab = my_str_to_word_array(string, '\n');
+    char **get_array;
     char **tab2 = alphabetical_order(tab, s);
 
-    infinite_putstr(all_arg);
-
-    if (detect_name(all_arg, string2) == 0) {
+    //infinite_putstr(all_arg);
+    //infinite_putstr(tab2);
+    if (detect_species(all_arg, string2) == 0) {
         my_putstr("List of species in compartment ");
         my_putstr(string2);
         my_putchar('\n');
-        infinite_putstr(tab2);
+        get_array = filter_tab(tab2, all_arg);
+        return;
+    }
+    if (detect_rp(all_arg, string2) == 0) {
+        my_putstr("List of reactants of reaction ");
+        my_putstr(string2);
+        my_putchar('\n');
+        my_putstr("List of products of reaction ");
+        my_putstr(string2);
+        my_putchar('\n');
+        return;
+    }
+    if (detect_reaction(all_arg, string2) == 0) {
+        my_putstr("List of reactions consuming species ");
+        my_putstr(string2);
+        my_putstr(" (quantities)\n");
         return;
     }
     my_putstr("List of species\n");
