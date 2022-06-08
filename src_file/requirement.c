@@ -60,8 +60,6 @@ char **my_strtowordtab_synthesis(char const *str)
     char **tab = malloc(sizeof(char *) * (obstacle + 1));
 
     tab = get_attribution(tab, 0, str, j);
-    //if (tab[j] != NULL)
-      //  j++;
     while (str[i]) {
         if ((j - 1) == obstacle) {
             break;

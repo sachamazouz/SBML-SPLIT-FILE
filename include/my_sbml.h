@@ -33,7 +33,6 @@ typedef struct pos_s {
 position_t;
 
 int array_line(char **tab);
-//void malloc_struct(char *map, position_t *p);
 void display_error(void);
 void ncurses(void);
 char **compartment_array(struct pos_s *);

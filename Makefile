@@ -11,6 +11,8 @@ SRC_FILE	= src_file
 
 PARTIE_1	= src_file/partie1
 
+PARTIE_2	= src_file/partie2
+
 NAME		=	SBMLparser
 
 CPPFLAGS	=	-I./include
@@ -32,6 +34,7 @@ SRC	=	$(SRC_FILE)/main.c 							\
 		$(PARTIE_1)/get_display.c					\
 		$(PARTIE_1)/get_display2.c					\
 		$(PARTIE_1)/alpha_arg_tri.c					\
+		$(PARTIE_2)/detect_name.c					\
 
 all:		$(NAME)
 
