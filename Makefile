@@ -50,7 +50,7 @@ fclean:		clean
 
 debug:		CFLAGS+=$(DEBUG)
 debug: 		fclean $(NAME)
-			valgrind ./SBMLparser sbml/1A.sbml
+			valgrind ./SBMLparser sbml/1A.sbml -i r
 
 re:		fclean all
 

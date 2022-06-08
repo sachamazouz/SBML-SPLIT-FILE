@@ -51,5 +51,7 @@ int main(int ac, char **av)
     }
     if (ac == 2)
         display_1(av, s);
+    if (ac == 4 && (str_compare(av[2], "-i") == 0))
+        display_compartment(av, s);
     return 0;
 }

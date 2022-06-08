@@ -60,17 +60,17 @@ char **my_strtowordtab_synthesis(char const *str)
     char **tab = malloc(sizeof(char *) * (obstacle + 1));
 
     tab = get_attribution(tab, 0, str, j);
-    j++;
+    //if (tab[j] != NULL)
+      //  j++;
     while (str[i]) {
         if ((j - 1) == obstacle) {
             break;
         }
-        if (detect_char(str[i]) == NON_ALPHA_NUM) {
+        if (detect_char(str[i]) == NON_ALPHA_NUM && detect_char(str[i + 1]) == ALPHA_NUM) {
             tab = get_attribution(tab, (i + 1), str, j);
-            j++;
         }
         i++;
     }
-    tab[j - 1] = NULL;
+    tab[j] = NULL;
     return tab;
 }
