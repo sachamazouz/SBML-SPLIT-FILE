@@ -62,14 +62,36 @@ char *get_arg(char *arg, char *string)
     return arg;
 }
 
+int arg_value(char **tab, int x)
+{
+    int counter = 0;
+
+    while (tab[x + 1][0] == '-') {
+        counter++;
+        x++;
+    }
+    return counter;
+}
+
 void display_basic_list(char **tab)
 {
     int x = 0;
-    int counter = 0;
+    int counter = 1;
+    int a = 0;
+    char *word = NULL;
+    int z = 0;
 
+    while (tab[z])
+        z++;
     while (tab[x]) {
-        my_putstr(tab[x]);
-        my_putchar('\n');
+        if (str_compare(word, tab[x]) != 0) {
+            my_putstr(tab[x]);
+            my_putchar('\n');
+        }
+        if (tab[x][0] != '-')
+            word = my_strdup(tab[x]);
+        //créer un tab compare
         x++;
+        counter++;
     }
 }
