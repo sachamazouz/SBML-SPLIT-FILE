@@ -68,6 +68,7 @@ char **my_strtowordtab_synthesis(char const *str)
         }
         if (detect_char(str[i]) == NON_ALPHA_NUM && detect_char(str[i + 1]) == ALPHA_NUM) {
             tab = get_attribution(tab, (i + 1), str, j);
+            j++;
         }
         i++;
     }
