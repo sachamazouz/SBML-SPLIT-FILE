@@ -28,6 +28,7 @@ typedef struct pos_s {
     int cursor;
     int cursor2;
     int *detector;
+    int good_line;
 }
 position_t;
 
@@ -47,4 +48,7 @@ int get_speci(char **tab);
 char *get_arg(char *arg, char *string);
 int is_a_speci(char *string);
 char **alpha_betical_order(char **tab, struct pos_s *);
+void display_1(char **av, struct pos_s *);
+char *extract(char *pathname);
+void display_basic_list(char **tab);
 #endif

@@ -86,7 +86,6 @@ void display_basic_list(char **tab)
 {
     int x = 0;
     int counter = 1;
-    int a = 1;
     int z = 0;
     char *word = NULL;
 

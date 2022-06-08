@@ -43,6 +43,9 @@ char **alphabetical_order(char **tab, position_t *s)
     char **filter = get_tagsattributes(tab, s);
     char **new_tab = malloc(sizeof(char *) * (good_line) + 1);
 
+    s->good_line = 0;
+    if (good_line == 1)
+        s->good_line = 1;
     s->cursor = 0;
     while (s->cursor != (good_line - 1)) {
         line_alpha = get_line_alpha(filter);

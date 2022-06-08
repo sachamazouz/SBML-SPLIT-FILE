@@ -44,17 +44,12 @@ char *extract(char *pathname)
 int main(int ac, char **av)
 {
     position_t *s = malloc(sizeof(position_t));
-    char *string;
-    char **tab;
-    char **tab2;
-    char **final_tab;
-    //fix_value(&s);
 
     if (ac == 2 && ((str_compare(av[1], "-h") == 0))) {
         display_usage();
         return 0;
     }
     if (ac == 2)
-        display_1(ac, av, s);
+        display_1(av, s);
     return 0;
 }
