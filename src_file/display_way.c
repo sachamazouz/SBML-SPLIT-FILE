@@ -30,25 +30,17 @@ void display_compartment(char **av, position_t *s)
     //infinite_putstr(all_arg);
     //infinite_putstr(tab2);
     if (detect_species(all_arg, string2) == 0) {
-        my_putstr("List of species in compartment ");
-        my_putstr(string2);
-        my_putchar('\n');
+        display_species(string2);
         get_array = filter_tab(tab2, all_arg);
         return;
     }
     if (detect_rp(all_arg, string2) == 0) {
-        my_putstr("List of reactants of reaction ");
-        my_putstr(string2);
-        my_putchar('\n');
-        my_putstr("List of products of reaction ");
-        my_putstr(string2);
-        my_putchar('\n');
+        display_rp1(string2);
+        display_rp2(string2);
         return;
     }
     if (detect_reaction(all_arg, string2) == 0) {
-        my_putstr("List of reactions consuming species ");
-        my_putstr(string2);
-        my_putstr(" (quantities)\n");
+        display_reaction(string2);
         return;
     }
     my_putstr("List of species\n");
