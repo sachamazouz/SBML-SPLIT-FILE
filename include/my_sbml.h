@@ -10,6 +10,7 @@
 
     #define ALPHA_NUM 0
     #define NON_ALPHA_NUM 1
+    #define MAX_INT_VALUE 2147483647
     #include <stdio.h>
     #include <ncurses.h>
     #include <sys/stat.h>

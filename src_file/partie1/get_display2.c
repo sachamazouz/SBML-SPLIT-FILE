@@ -73,13 +73,22 @@ int arg_value(char **tab, int x)
     return counter;
 }
 
+int checker_display1(char **tab, int x, int z)
+{
+    while (tab[x + 1][0] == '-') {
+        x++;
+        if (x == (z - 1))
+            return MAX_INT_VALUE;
+    }
+    return x;
+}
 void display_basic_list(char **tab)
 {
     int x = 0;
     int counter = 1;
-    int a = 0;
-    char *word = NULL;
+    int a = 1;
     int z = 0;
+    char *word = NULL;
 
     while (tab[z])
         z++;
@@ -88,9 +97,12 @@ void display_basic_list(char **tab)
             my_putstr(tab[x]);
             my_putchar('\n');
         }
+        if (str_compare(word, tab[x]) == 0)
+            x = checker_display1(tab, x, z);
+        if (x == MAX_INT_VALUE)
+            return;
         if (tab[x][0] != '-')
             word = my_strdup(tab[x]);
-        //créer un tab compare
         x++;
         counter++;
     }
