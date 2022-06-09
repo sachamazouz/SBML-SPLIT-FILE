@@ -11,12 +11,16 @@ char **tab_add(char **tab, char *string, position_t *s)
 {
     int a = my_strlen(string);
     int d = 0;
+    int j = 0;
 
     if (a == 0)
         return tab;
-    tab[s->cursor] = malloc(sizeof(char) * (a + 1));
-    while (a >= d) {
-        tab[s->cursor][d] = string[d];
+    while (string[j] == ' ' || string[j] == '\t' || string[j] == '\v')
+        j++;
+    printf("%d\n", j);
+    tab[s->cursor] = malloc(sizeof(char) * ((a + 1) - (j)));
+    while (a >= (d + j)) {
+        tab[s->cursor][d] = string[d + j];
         d++;
     }
     tab[s->cursor][d - 1] = '\0';
