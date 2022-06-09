@@ -60,4 +60,12 @@ void display_species(char *string2);
 int detect_species(char **all_arg, char *string2);
 void display_compartment(char **av, struct pos_s *);
 void display_cat1(char **final_tab_t, int j);
+char **ordre_alpha(char **tab, struct pos_s *);
+char **scrap_species(char **a_tab, struct pos_s *);
+void select_print_species(char **stwa, char **tab, char *argument, struct pos_s *);
+char **concating(char **tab);
+int get_line_alpha(char **filter);
+int check_container(char *string, char *argument);
+char **get_space_tab(char **tab);
+int get_line_tab(char **tab);
 #endif

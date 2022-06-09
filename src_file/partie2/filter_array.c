@@ -36,7 +36,7 @@ char *get_word(char *string)
     str[y] = '\0';
     return str;
 }
-char **scrap_species(char **all_arg, char **a_tab, position_t *s)
+char **scrap_species(char **a_tab, position_t *s)
 {
     int i = 0;
     int j = 0;

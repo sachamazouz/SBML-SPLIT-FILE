@@ -24,8 +24,7 @@ void display_compartment(char **av, position_t *s)
     char *string2 = my_strdup(av[3]);
     char **all_arg = my_strtowordtab_synthesis(string);
     char **tab = my_str_to_word_array(string, '\n');
-    char **get_array = ordre_alpha(scrap_species(all_arg, tab, s), s);
-    char **tab2 = alphabetical_order(tab, s);
+    char **get_array = ordre_alpha(scrap_species(tab, s), s);
 
     if (detect_species(all_arg, string2) == 0) {
         display_species(string2);
