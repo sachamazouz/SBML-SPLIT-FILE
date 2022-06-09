@@ -37,6 +37,7 @@ SRC	=	$(SRC_FILE)/main.c 							\
 		$(PARTIE_2)/detect_name.c					\
 		$(PARTIE_2)/filter_array.c					\
 		$(PARTIE_2)/void_function.c					\
+		$(PARTIE_2)/display_cat.c					\
 
 all:		$(NAME)
 

@@ -24,14 +24,14 @@ void display_compartment(char **av, position_t *s)
     char *string2 = my_strdup(av[3]);
     char **all_arg = my_strtowordtab_synthesis(string);
     char **tab = my_str_to_word_array(string, '\n');
-    char **get_array = concating(ordre_alpha(scrap_species(all_arg, tab, s), s));
+    char **get_array = ordre_alpha(scrap_species(all_arg, tab, s), s);
     char **tab2 = alphabetical_order(tab, s);
 
     //infinite_putstr(all_arg);
     //infinite_putstr(tab2);
     if (detect_species(all_arg, string2) == 0) {
         display_species(string2);
-        get_array = filter_tab(tab2, all_arg);
+        select_print_species(tab, get_array, string2);
         return;
     }
     if (detect_rp(all_arg, string2) == 0) {
@@ -44,7 +44,6 @@ void display_compartment(char **av, position_t *s)
         return;
     }
     my_putstr("List of species\n");
-    infinite_putstr(get_array);
-    return;
+    infinite_putstr(concating(get_array));
 }
 
