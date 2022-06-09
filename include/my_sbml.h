@@ -59,5 +59,5 @@ char **filter_tab(char **tab2, char **all_arg);
 void display_species(char *string2);
 int detect_species(char **all_arg, char *string2);
 void display_compartment(char **av, struct pos_s *);
-
+void display_cat1(char **final_tab_t, int j);
 #endif

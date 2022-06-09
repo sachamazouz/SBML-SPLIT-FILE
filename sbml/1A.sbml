@@ -7,7 +7,7 @@
 <listOfSpecies>
 <species compartment="Cytosol" name="Adenosine diphosphate" id="Compound1034"/>
 <species compartment="Cytosol" name="Glucose 6-phosphate" id="Compound1083"/>
-<species compartment="Cytosol" name="Alpha-D-Glucose" id="Compound1851"/>
+<species compartment="Cytoosol" name="Alpha-D-Glucose" id="Compound1851"/>
 <species compartment="Cytosol" name="Adenosine triphosphate" id="Compound414"/>
 </listOfSpecies>
 <listOfReactions>

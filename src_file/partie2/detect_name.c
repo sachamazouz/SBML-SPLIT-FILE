@@ -58,4 +58,3 @@ int detect_rp(char **all_arg, char *string2)
         return 0;
     return 1;
 }
-

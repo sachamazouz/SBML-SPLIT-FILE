@@ -27,11 +27,9 @@ void display_compartment(char **av, position_t *s)
     char **get_array = ordre_alpha(scrap_species(all_arg, tab, s), s);
     char **tab2 = alphabetical_order(tab, s);
 
-    //infinite_putstr(all_arg);
-    //infinite_putstr(tab2);
     if (detect_species(all_arg, string2) == 0) {
         display_species(string2);
-        select_print_species(tab, get_array, string2);
+        select_print_species(tab, get_array, string2, s);
         return;
     }
     if (detect_rp(all_arg, string2) == 0) {
