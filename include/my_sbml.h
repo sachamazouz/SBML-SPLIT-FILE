@@ -50,4 +50,14 @@ char **alpha_betical_order(char **tab, struct pos_s *);
 void display_1(char **av, struct pos_s *);
 char *extract(char *pathname);
 void display_basic_list(char **tab);
+int detect_reaction(char **all_arg, char *string2);
+void display_rp2(char *string2);
+void display_reaction(char *string2);
+void display_rp1(char *string1);
+int detect_rp(char **all_arg, char *string2);
+char **filter_tab(char **tab2, char **all_arg);
+void display_species(char *string2);
+int detect_species(char **all_arg, char *string2);
+void display_compartment(char **av, struct pos_s *);
+
 #endif
