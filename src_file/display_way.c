@@ -24,7 +24,7 @@ void display_compartment(char **av, position_t *s)
     char *string2 = my_strdup(av[3]);
     char **all_arg = my_strtowordtab_synthesis(string);
     char **tab = my_str_to_word_array(string, '\n');
-    char **get_array;
+    char **get_array = concating(ordre_alpha(scrap_species(all_arg, tab, s), s));
     char **tab2 = alphabetical_order(tab, s);
 
     //infinite_putstr(all_arg);
@@ -44,7 +44,7 @@ void display_compartment(char **av, position_t *s)
         return;
     }
     my_putstr("List of species\n");
-    //tous les afficher
+    infinite_putstr(get_array);
     return;
 }
 
